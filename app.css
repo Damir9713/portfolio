@@ -98,6 +98,7 @@ div .nav-item:hover::after {
   padding-top: 75px;
   padding-bottom: 50px;
   padding-left: 15px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .about-me img {
@@ -156,13 +157,13 @@ div .nav-item:hover::after {
 }
 
 .timeline-item:hover .timeline-dot {
-  background-color: aqua;
+  background-color: orange;
 }
 
 .timeline-dot {
   height: 16px;
   width: 16px;
-  background-color: #eaa023;
+  background-color: white;
   position: absolute;
   left: calc(50% - 8px);
   border-radius: 50%;
@@ -170,7 +171,7 @@ div .nav-item:hover::after {
 }
 .timeline-date {
   font-size: 18px;
-  color: #eaa023;
+  color: white;
   margin: 6px 0 15px;
 }
 .timeline-content {
@@ -228,7 +229,9 @@ div .nav-item:hover::after {
 .card {
   margin: 15px 0px;
   color: black;
-  background: beige;
+  background: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .fluid-img {
@@ -245,6 +248,12 @@ div .nav-item:hover::after {
   transform: scale(1.3);
   transform-origin: 50% 50%;
   filter: contrast(140%);
+}
+
+/* FOOTER */
+
+footer p {
+  color: black;
 }
 
 /* MEDIA QUERIE */

@@ -42,7 +42,7 @@ nav .d-flex {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 }
 
 .overlay {
@@ -114,76 +114,101 @@ div .nav-item:hover::after {
 
 /* PARCOURS */
 
-#parcours {
-  /* max-width: 800px; */
-  margin: 100px auto 180px auto;
-  padding: 40px 30px 100px 30px;
-  background-color: black;
-  /* background: url(./images/mountain-6596074_1920.jpg) no-repeat 50% 50%; */
+.timeline-section {
+  background-image: url(./images/moon-2048727_1920.jpg);
   background-size: cover;
-  border-radius: 8px;
-  box-shadow: -1px -1px 8px #283655;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  background-color: #24292d;
+  min-height: 100vh;
+  padding: 100px 15px;
+}
+.timeline-items {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
-
-#parcours h3 {
-  font-size: 2.5em;
-  padding-bottom: 30px;
-}
-
-#parcours h4 {
-  font-size: 1.6em;
-  color: #ff4e50;
-  margin-left: 20px;
-}
-
-#parcours h6 {
-  font-style: italic;
-  color: #edca21;
-  margin-left: 20px;
-}
-
-#parcours p {
-  line-height: 1.9em;
-}
-
-/* .timeline {
-  border-top: 3px solid;
-  border-image: linear-gradient(to right, #f9d423, #ff4e50);
-  border-image-slice: 1;
-  margin: 0;
-  padding: 40px;
-  position: relative;
-}
-
-.timeline:nth-child(1):after {
-  content: "▲";
-  color: #ff4e50;
+.timeline-items::before {
+  content: "";
   position: absolute;
-  top: -10px;
-  right: -10px;
-  box-sizing: content-box !important;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  left: calc(50% - 1px);
+}
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
 }
 
-.timeline:nth-child(1) {
-  border-bottom: 3px solid;
-  border-top: none;
-  width: 80%;
+.timeline-item:hover .timeline-dot {
+  background-color: aqua;
 }
 
-.timeline:nth-child(2) {
-  border-top: none;
+.timeline-dot {
+  height: 16px;
+  width: 16px;
+  background-color: #eaa023;
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+.timeline-date {
+  font-size: 18px;
+  color: #eaa023;
+  margin: 6px 0 15px;
+}
+.timeline-content {
+  background-color: #2f363e;
+  padding: 30px;
+  border-radius: 5px;
+}
+.timeline-content h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.timeline-content p {
+  color: #c8c8c8;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
 }
 
-.timeline:nth-child(odd) {
-  border-right: 3px solid;
-  padding-left: 0;
+/* responsive */
+@media (max-width: 767px) {
+  .timeline-items::before {
+    left: 7px;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
 }
-
-.timeline:nth-child(even) {
-  border-left: 3px solid;
-  padding-right: 0;
-} */
 
 /* Portfolio section */
 
@@ -224,6 +249,16 @@ div .nav-item:hover::after {
 
 /* MEDIA QUERIE */
 
+@media screen and (max-width: 1024px) {
+  .damir-pic {
+    background-attachment: scroll;
+  }
+
+  .timeline-section {
+    background-attachment: scroll;
+  }
+}
+
 @media screen and (max-width: 991px) {
   div .nav-item:hover::after {
     width: 0%;
@@ -253,43 +288,5 @@ div .nav-item:hover::after {
 
   .title-portfolio {
     font-size: 50px;
-  }
-
-  .timeline {
-    border-top: 3px solid;
-    border-image: linear-gradient(to right, #f9d423, #ff4e50);
-    border-image-slice: 1;
-    margin: 0;
-    padding: 40px;
-    position: relative;
-  }
-
-  .timeline:nth-child(1):after {
-    content: "▲";
-    color: #ff4e50;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    box-sizing: content-box !important;
-  }
-
-  .timeline:nth-child(1) {
-    border-bottom: 3px solid;
-    border-top: none;
-    width: 80%;
-  }
-
-  .timeline:nth-child(2) {
-    border-top: none;
-  }
-
-  .timeline:nth-child(odd) {
-    border-right: 3px solid;
-    padding-left: 0;
-  }
-
-  .timeline:nth-child(even) {
-    border-left: 3px solid;
-    padding-right: 0;
   }
 }

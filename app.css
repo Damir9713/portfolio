@@ -42,7 +42,7 @@ nav .d-flex {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .overlay {
@@ -115,10 +115,11 @@ div .nav-item:hover::after {
 /* PARCOURS */
 
 #parcours {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 100px auto 180px auto;
   padding: 40px 30px 100px 30px;
-  background: url(./images/mountain-6596074_1920.jpg) no-repeat fixed 50% 50%;
+  background-color: black;
+  /* background: url(./images/mountain-6596074_1920.jpg) no-repeat 50% 50%; */
   background-size: cover;
   border-radius: 8px;
   box-shadow: -1px -1px 8px #283655;
